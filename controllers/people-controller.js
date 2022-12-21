@@ -1,5 +1,4 @@
 const express = require('express')
-const { restart } = require('nodemon')
 const router = express.Router()
 
 //import model (People)
@@ -22,7 +21,7 @@ router.get('/', async (req, res)=>{
 //people create route
 //http://localhost:4000/people/
 router.post('/', async (req, res)=>{
-    console.log('post route', req.body)
+    // console.log('post route', req.body)
     // res.status(201).json({message: "people create/post route"})
     try {
         const newPerson = await People.create(req.body)

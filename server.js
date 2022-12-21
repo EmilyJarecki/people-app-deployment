@@ -1,15 +1,17 @@
 const express = require('express')
 const app = express()
-const peopleController = require('./controllers/people-controller')
 
 //app dependencies
 const cors = require('cors')
 const morgan = require('morgan')
 
+
+const peopleController = require('./controllers/people-controller')
+
 require("dotenv").config()
 require('./config/db.connection')//node runs all code in this file
 
-const {PORT} = process.env
+const { PORT } = process.env
 
 //express/app middleware
 app.use(express.json())
